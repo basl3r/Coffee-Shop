@@ -1,0 +1,117 @@
+header {
+  position: relative;
+  height: 100vh;
+  background-image: url('../../images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1; 
+}
+
+nav {
+  padding: 45px 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: $font-source-sans-pro;
+
+
+  a,
+  a:active,
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 20px;
+    color: $color-gray;
+    margin-right: 35px;
+  }
+
+  .logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 350px;
+
+    span {
+      color: $color-white;
+      z-index: 100;
+      font-size: 16px;
+      display: inline-block;
+    }
+  
+    span:first-child {
+      font-size: 36px;
+      letter-spacing: 15px;
+      font-weight: $font-black;
+    }
+
+    span:last-child {
+      padding-left: 10px;
+      letter-spacing: 5px;
+    }
+  }
+}
+
+.hero {
+  position: relative;
+  margin-top: -50px;
+
+  h1:last-child {
+    padding-left: 250px;
+    text-align: right;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: $color-primary;
+    width: 275px;
+    height: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 70px;
+  }
+}
+
+.discover {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding-bottom: 40px;
+    font-size: 30px;
+    font-family: $font-source-sans-pro;
+    font-weight: $font-regular;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: $color-white;
+}
+
+
+
