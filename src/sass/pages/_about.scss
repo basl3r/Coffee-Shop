@@ -1,3 +1,56 @@
-p {
-  color: white;
+.about {
+  position: relative;
+  background-image: url('../../images/about-us.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  padding-top: 50px;
+  margin-top: 50px;
+
+  .h1 {
+    margin-top: 10px;
+    flex: 100%;
+  }
+
+  p {
+    font-family: $font-source-sans-pro;
+    font-size: 40px;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: $color-white;
+  }
+
+  p:last-child {
+    text-align: right;
+    margin-right: -160px;
+    margin-top: 100px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-text {
+    flex: 100%;
+    max-width: 990px;
+    margin-top: 40px;
+    padding-left: 15px;
+    padding-right: 170px;
+    text-align: left;
+  }
 }
+
+  .about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1; 
+  }
