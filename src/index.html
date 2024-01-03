@@ -34,9 +34,40 @@
       </div>
     </div>
   </header>
+  <section id="pages">
+    <div id="homepage" class="homepage active">
+      <h1 class="h1">products</h1>
+      <div id="products" class="products">
+
+      </div>
+      <div class="about">
+        <div class="container">
+          <h1 class="h1">about us</h1>
+          <div class="about-text">
+            <p>Who are we? Just a bunch of friends with 
+              a love for a good coffee and desire to create
+              something new, something original. </p>
+            <p>Our coffees reflect us – young, wild and free. We are on the journey of new tastes...</p>
+            <p>Join us!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="product-list" class="container product-list">
+      <h1 class="h1">products</h1>
+      <div class="products">
+
+      </div>
+    </div>
+    <div id="contact" class="contact"></div>
+  </section>
+
+  <script id="template-menu-product" type="text/x-handlebars-template">
+    {{ description }}
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="https://kit.fontawesome.com/cffd40ac62.js" crossorigin="anonymous"></script>
-  <script src="js/script.js"></script>
+  <script src="js/app.js" type="module"></script>
 </body>
 </html>
