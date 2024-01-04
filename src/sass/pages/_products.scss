@@ -17,5 +17,116 @@
 
 .products {
   padding-top: 100px;
+
+  &.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
+.product-wrapper {
+  max-width: 1165px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 85px;
+}
+
+.product-description {
+  position: relative;
+  flex: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 65px 120px 80px 0;
+  gap: 12px;
+
+    .h2::after {
+      content: '';
+      position: absolute;
+      width: 109px;
+      height: 4px;
+      background-color: $color-primary;
+      top: 150px;
+      right: 470px;
+    }
+
+    p {
+      text-align: left;
+      padding-left: 140px;
+      font-family: $font-source-sans-pro;
+      font-size: 15px;
+    }
+
+    .product-ratings {
+      width: 100%;
+      display: flex;
+      flex: 1;
+
+      .ratings {
+        flex: 66%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        letter-spacing: 1px;
+        padding-top: 25px;
+        gap: 5px;
+
+        span {
+          font-family: $font-source-sans-pro;
+          font-weight: $font-bold;
+          font-size: 18px;
+          color: $color-primary;
+          text-transform: uppercase;
+        }
+
+        p {
+          display: inline;
+          padding-left: 0;
+          font-size: 18px;
+          color: $color-black;
+
+        }
+      }
+
+      .isfavourite {
+        flex: 33%;
+        margin-left: auto;
+        display: none;
+
+        &.active {
+          display: block;
+        }
+
+      }
+    }
+}
+
+.product-image {
+  flex: 50%;
+  position: relative;
+  display: inline-block;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+}
+
+.product-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 10px solid $color-black; 
+  border-radius: 8px;
+  filter: blur(10px); 
+  z-index: -1; 
+}
