@@ -7,6 +7,15 @@ export const select = {
     homepage: '#homepage #products',
     product: '#product-list',
     contact: '#contact'
+  },
+  classes: {
+    product: {
+      image: '.product-image',
+      description: '.product-description'
+    }, 
+    nav: {
+      links: '.main-nav a',
+    }
   }
 };
 
