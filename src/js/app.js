@@ -41,6 +41,7 @@ const app = {
     const thisApp = this;
     thisApp.initData();
     thisApp.initPages();
+    thisApp.changeHero();
   },
 
   initPages: function() {
@@ -104,6 +105,18 @@ const app = {
       }
     }
   },
+
+  // Dynamicly change h1 in the header
+  changeHero: function() {
+    let keys = Object.keys(select.hero);
+    let randomKey = keys[Math.floor(Math.random() * keys.length)];
+    let randomPhrase = select.hero[randomKey].split(' ');;
+
+    console.log('randomPhrase', randomPhrase);
+
+    document.getElementById('firstLine').innerText = randomPhrase[0] + ' ' + randomPhrase[1];
+    document.getElementById('secondLine').innerText = randomPhrase.slice(2).join(' ');
+  }
 };
 
 app.init();

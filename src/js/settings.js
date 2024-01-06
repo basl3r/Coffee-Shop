@@ -16,6 +16,11 @@ export const select = {
     nav: {
       links: '.main-nav a',
     }
+  },
+  hero: {
+    opt1: 'Home of Original Tastes',
+    opt2: 'Real Venezuela, Real Coffee',
+    opt3: 'Taste Real Venezuela',
   }
 };
 

@@ -104,10 +104,26 @@ nav {
   position: relative;
   margin-top: -50px;
 
-  h1:last-child {
-    padding-left: 250px;
-    text-align: right;
-  }
+  #dynamicText {
+    font-family: $font-source-sans-pro;
+    font-size: 110px;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    color: $color-primary;
+    margin: 0;
+    padding: 0 50px;
+    white-space: nowrap; 
+}
+
+#firstLine {
+    display: inline-block;
+}
+
+#secondLine {
+    display: inline-block; 
+    float: right;
+}
 
   &::after {
     content: '';
@@ -118,7 +134,7 @@ nav {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 70px;
+    margin-top: 180px;
   }
 }
 
