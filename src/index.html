@@ -16,11 +16,11 @@
           <span><a href="./index.html">el tigre</a></span>
           <span>venezuelan coffee beans</span>
         </div>
-        <div>
+        <div class="main-nav">
           <ul>
-            <li><a href="./index.html">home</a></li>
-            <li><a href="./index.html">products</a></li>
-            <li><a href="./index.html">contact</a></li>
+            <li><a href="#homepage">home</a></li>
+            <li><a href="#product-list">products</a></li>
+            <li><a href="#contact">contact</a></li>
           </ul>
         </div>
       </nav>
@@ -35,18 +35,16 @@
     </div>
   </header>
   <section id="pages">
-    <div id="homepage" class="homepage active">
+    <div id="homepage" class="homepage">
       <h1 class="h1">products</h1>
-      <div id="products" class="products">
-
+      <div id="products" class="products container">
       </div>
       <div class="about">
         <div class="container">
           <h1 class="h1">about us</h1>
           <div class="about-text">
-            <p>Who are we? Just a bunch of friends with 
-              a love for a good coffee and desire to create
-              something new, something original. </p>
+            <p>Who are we? Just a bunch of friends with a love for a good coffee and desire to create something new, something original.
+            </p>
             <p>Our coffees reflect us – young, wild and free. We are on the journey of new tastes...</p>
             <p>Join us!</p>
           </div>
@@ -58,15 +56,52 @@
     </div>
     <div id="product-list" class="container product-list">
       <h1 class="h1">products</h1>
-      <div class="products">
+      <div class="products container">
 
       </div>
+
     </div>
-    <div id="contact" class="contact"></div>
+    <div id="contact" class="contact container">
+      <h1 class="h1">contact us</h1>
+      <div class="form-wrapper">
+        <form action="/submit" method="post">
+          <section>
+              <label for="name">name</label>
+              <input type="text" id="name" name="name" required>
+          </section>
+          <section>
+              <label for="title">title</label>
+              <input type="text" id="title" name="title" required>
+          </section>
+          <section>
+              <label for="message">message</label>
+              <input type="text" id="message" name="message" required>
+          </section>
+          <button type="submit">Submit</button>
+      </form>
+      </div>
+    </div>
   </section>
 
   <script id="template-menu-product" type="text/x-handlebars-template">
-    {{ description }}
+    <div class="product-wrapper">
+      <div class="product-description">
+        <span class="h2"> {{ id }} {{ name }}</span>
+        <p> {{ description }}</p>
+        <div class="product-ratings"> 
+          <div class="ratings">
+            <span> <p>roasting:</p> {{ roasting }} </span>
+            <span> <p>intensity:</p> {{ intensity }} </span>
+          </div>
+          <div class="isFavourite" style = "{{#unless isFavourite}} visibility: hidden;{{/unless}}">
+            <img src="images/favourite-coffee.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="product-image">
+        {{{ image }}}
+      </div>
+    </div>
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
